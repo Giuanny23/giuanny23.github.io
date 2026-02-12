@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de laboratório</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Reserva de laboratório</h1>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <form id="form" method="post" onsubmit="return validarform(event)">
+                <p class="titulo-form">Faça sua reserva</p>
+
+                <fieldset>
+                    <legend>Dados</legend>
+
+                    <div class="sessao-form">
+                        <label>Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Ex: João Silva">
+                    </div>
+
+                    <div class="sessao-form">
+                        <label>E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Email@exemplo.com">
+                    </div>
+
+                    <div class="sessao-form">
+
+                        <div class="sessao">
+                            <label>Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+                        </div>
+
+                        <br>
+
+                        <div class="sessao">
+                            <label>Total de pessoas</label>
+                            <input type="number" id="totalPessoas" name="totalPessoas" min="1" max="30"
+                                placeholder="10">
+                        </div>
+
+                    </div>
+
+                    <div class="sessao-form">
+                        <label>Data</label>
+                        <input type="date" id="nascimento">
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Lab</legend>
+
+                    <div class="sessao-form">
+                        <label>Qual lab deseja agendar?</label>
+                        <select id="lab" name="lab">
+                            <option value="" disabled selected>Selecione uma opção...</option>
+                            <option value="lab1">Laboratório 1</option>
+                            <option value="lab2">Laboratório 2</option>
+                            <option value="lab3">Laboratório 3</option>
+                        </select>
+                    </div>
+
+                    <div class="sessao-form">
+                        <label>Material (Opcional)</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="material" value="piloto">
+                                Piloto</label>
+                            <label><input type="checkbox" name="material" value="projetor"> Projetor</label>
+                            <label><input type="checkbox" name="material" value="pendrive"> Pendrive</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Arquivos e Comentários</legend>
+
+                    <div class="sessao-form">
+                        <label>Declaração do professor (PDF ou Imagem)</label>
+                        <input type="file" id="declaracao" name="declaracao">
+                    </div>
+
+                    <div class="sessao-form">
+                        <label>Justificativa ou Comentários</label>
+                        <textarea id="comentarios" name="comentarios" rows="4"
+                            placeholder="Conte-nos um pouco mais..."></textarea>
+                    </div>
+
+                </fieldset>
+
+                <button class="btn-enviar" type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+    
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
